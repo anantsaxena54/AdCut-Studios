@@ -1,20 +1,6 @@
 <div class="app-global-wrapper" [style.background-color]="globalBgColor()">
   <!-- Main Content Wrapper (Navbar, Hero, Portfolio, About, Contact, Footer) -->
   <div class="main-content-wrapper">
-    <!-- Fixed Left rotated Email bar (Reference Site style) -->
-    <div class="fixed-left-bar">
-      <a href="mailto:arun@adcutstudios.in">arun@adcutstudios.in</a>
-    </div>
-
-    <!-- Fixed Right rotated Scroll Indicator bar (Reference Site style) -->
-    <div class="fixed-right-bar">
-      <span class="scroll-text">scroll</span>
-      <div class="scroll-track-container">
-        <div class="scroll-track-bg"></div>
-        <div class="scroll-track-progress" [style.height.%]="overallScrollProgress() * 100"></div>
-        <div class="scroll-dot-indicator" [style.transform]="'translateY(' + (overallScrollProgress() * 44) + 'px)'"></div>
-      </div>
-    </div>
 
     <!-- Main Top Header Navigation -->
     <app-navbar [bgColor]="globalBgColor()"></app-navbar>

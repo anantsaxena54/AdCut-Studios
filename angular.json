@@ -21,11 +21,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "ignore": [
-                  "Videos/**",
-                  "assets/*.gif"
-                ]
+                "input": "public"
               }
             ],
             "styles": [
@@ -34,6 +30,15 @@
           },
           "configurations": {
             "production": {
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "public",
+                  "ignore": [
+                    "Videos/**"
+                  ]
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
