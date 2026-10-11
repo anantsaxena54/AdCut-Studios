@@ -1,6 +1,17 @@
 <section class="hero-section" #hero>
   <div class="hero-media-box">
-    <img src="assets/GIF_12.gif" alt="ADCUT STUDIOS" class="hero-gif-media">
+    <video 
+      #heroVideo
+      src="assets/hero-loop.mp4" 
+      poster="assets/hero-poster.jpg"
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      webkit-playsinline
+      preload="auto"
+      class="hero-gif-media">
+    </video>
     <div class="hero-media-overlay"></div>
   </div>
   <div class="hero-container">

@@ -35,7 +35,8 @@
                   "glob": "**/*",
                   "input": "public",
                   "ignore": [
-                    "Videos/**"
+                    "Videos/**",
+                    "assets/GIF_12.gif"
                   ]
                 }
               ],
