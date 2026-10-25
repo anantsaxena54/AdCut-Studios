@@ -36,7 +36,8 @@
                   "input": "public",
                   "ignore": [
                     "Videos/**",
-                    "assets/GIF_12.gif"
+                    "assets/GIF_12.gif",
+                    "assets/Banner logos/**"
                   ]
                 }
               ],

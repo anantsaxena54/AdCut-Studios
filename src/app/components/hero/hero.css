@@ -38,6 +38,16 @@
   transform: scale(calc(1 + var(--hero-scroll-p, 0) * 0.08));
   transition: transform 0.1s ease-out;
   will-change: transform;
+  pointer-events: none;
+}
+
+.hero-gif-media::-webkit-media-controls,
+.hero-gif-media::-webkit-media-controls-start-playback-button,
+.hero-gif-media::-webkit-media-controls-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .hero-media-overlay {

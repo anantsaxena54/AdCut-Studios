@@ -33,31 +33,17 @@
 </div>
 -->
 
-<!-- Brand Logos Marquee Strip (Positioned directly below the first banner) -->
+<!-- Brand Logos Marquee Strip -->
 <div class="brands-strip-wrapper">
   <div class="brands-marquee">
-    @for (brand of brands; track brand.name + '_1') {
-    <div class="brand-item">
-      <i class="fa-solid {{ brand.icon }}"></i>
-      <span>{{ brand.name }}</span>
+    @for (brand of brandLogos; track brand.name + '_1') {
+    <div class="brand-item" [title]="brand.name">
+      <img [src]="brand.src" [alt]="brand.name" class="brand-logo-img" loading="lazy">
     </div>
     }
-    @for (brand of brands; track brand.name + '_2') {
-    <div class="brand-item">
-      <i class="fa-solid {{ brand.icon }}"></i>
-      <span>{{ brand.name }}</span>
-    </div>
-    }
-    @for (brand of brands; track brand.name + '_3') {
-    <div class="brand-item">
-      <i class="fa-solid {{ brand.icon }}"></i>
-      <span>{{ brand.name }}</span>
-    </div>
-    }
-    @for (brand of brands; track brand.name + '_4') {
-    <div class="brand-item">
-      <i class="fa-solid {{ brand.icon }}"></i>
-      <span>{{ brand.name }}</span>
+    @for (brand of brandLogos; track brand.name + '_2') {
+    <div class="brand-item" [title]="brand.name">
+      <img [src]="brand.src" [alt]="brand.name" class="brand-logo-img" loading="lazy">
     </div>
     }
   </div>
@@ -68,18 +54,22 @@
   <div class="container about-content reveal-on-scroll">
     <!-- Bio Text -->
     <div class="bio-column">
-      <h2 class="about-title">ABOUT ADCUT STUDIOS</h2>
+      <h2 class="about-title">About AdCut Studios</h2>
 
       <p class="bio-paragraph">
-        <em>AdCut Studios was started by Arun Chelani — an Filmmaker known for MITRATA - Friendship's Lovestory.<br>Has always been drawn to what happens between the frames.</em>
+        <em>AdCut Studios was started by Arun Chelani, an Filmmaker known for MITRATA - Friendship's Lovestory.<br>Has
+          always been drawn to what happens between the frames.</em>
       </p>
 
       <p class="bio-paragraph">
-        Over the years, we’ve had the opportunity to work with <em>150+ brands</em> across commercials, films and digital content. Our work moves between <em>production and post-production — shoot, edit, colour, sound, music, VFX and finishing.</em>
+        Over the years, we’ve had the opportunity to work with <em>150+ brands</em> across commercials, films and
+        digital content. Our work moves between <em>production and post-production shoot, edit, colour, sound, music,
+          VFX and finishing.</em>
       </p>
 
       <p class="bio-paragraph">
-        We’re a small, hands-on studio, and we like being close to the work. From the first frame to the final export, we stay involved in the process and the details that shape how a film feels.
+        We’re a small, hands-on studio, and we like being close to the work. From the first frame to the final export,
+        we stay involved in the process and the details that shape how a film feels.
       </p>
 
       <p class="bio-paragraph">

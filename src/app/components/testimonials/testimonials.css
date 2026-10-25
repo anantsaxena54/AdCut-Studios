@@ -15,10 +15,13 @@
 }
 
 .about-title {
-  font-family: var(--font-family-display);
-  font-size: clamp(36px, 5vw, 64px);
+  font-family: 'Oswald', var(--font-family-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: clamp(34px, 4.8vw, 60px);
   color: #FFFFFF;
   margin-bottom: 8px;
+  text-transform: none !important;
 }
 
 .bio-paragraph {
@@ -65,9 +68,12 @@
   position: relative;
   margin-top: 0;
   padding: 24px 0;
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.01);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
 }
 
 .brands-marquee {
@@ -75,31 +81,44 @@
   align-items: center;
   gap: 60px;
   width: max-content;
-  animation: marquee 30s linear infinite;
+  animation: marquee 65s linear infinite;
+}
+
+.brands-marquee:hover {
+  animation-play-state: paused;
 }
 
 .brand-item {
   display: flex;
   align-items: center;
-  gap: 36px;
-  font-family: 'Six Caps', sans-serif !important;
-  font-size: clamp(72px, 10vw, 150px);
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.04em;
-  line-height: 0.85;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-  padding-right: 36px;
-}
-
-.brand-item i {
-  font-size: 0.45em;
+  justify-content: center;
+  height: 52px;
+  min-width: 90px;
+  padding: 0 8px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
 .brand-item:hover {
-  color: #FFFFFF;
+  transform: scale(1.15);
 }
 
+.brand-logo-img {
+  height: 40px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+.brand-item:hover .brand-logo-img {
+  opacity: 1;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.4));
+}
 
 @media (max-width: 768px) {
   .about-section {
@@ -107,15 +126,23 @@
   }
 
   .brands-strip-wrapper {
-    margin-top: 50px;
-    padding: 24px 0;
+    margin-top: 30px;
+    padding: 18px 0;
   }
 
   .brands-marquee {
-    gap: 32px;
+    gap: 36px;
+    animation-duration: 40s;
   }
 
   .brand-item {
-    font-size: 18px;
+    height: 38px;
+    min-width: 70px;
+    padding: 0 4px;
+  }
+
+  .brand-logo-img {
+    height: 30px;
+    max-width: 105px;
   }
 }
