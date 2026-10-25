@@ -151,7 +151,7 @@ export class PortfolioComponent {
       views: '5.1M',
       tags: ['Commercial', 'Editing', '456 Studios'],
       description: 'Production House: 456 Studios | Director: Llyod Bapista | Editor: Arun Chelani',
-      videoUrl: 'Videos/Mahindra Master_EC.mp4',
+      videoUrl: 'Videos/7XO_MASTER_33sec.mp4',
       specs: {
         resolution: '4K DCI',
         fps: '24 fps',
