@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:hostinger": "ng build --configuration production --base-href=/",
+    "package:hostinger": "npm run build:hostinger && python3 -c \"import os, zipfile; z = 'hostinger-deploy.zip'; os.path.exists(z) and os.remove(z); zipf = zipfile.ZipFile(z, 'w', zipfile.ZIP_DEFLATED); [zipf.write(os.path.join(r, f), os.path.relpath(os.path.join(r, f), 'dist/arun-portfolio/browser')) for r, d, files in os.walk('dist/arun-portfolio/browser') for f in files]; print('Successfully packaged', z)\"",
     "deploy": "ng build --base-href=/Arun-Portfolio/ && npx angular-cli-ghpages --dir=dist/arun-portfolio/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
